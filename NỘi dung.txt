@@ -1,0 +1,898 @@
+﻿Nhóm 4:Nhập môn lập trình 
+Phân công: ***1,2,3,4,5: Nguyễn Tấn Duy
+                    ***6,7,8,9,10: Võ Thị Kim Hiếu
+                    ***11,12,13,14,15: Nguyễn Đức Hòa
+
+BAI 1
+
+#include<stdio.h>
+#include<conio.h>
+void chuyendoi()
+{
+	float a,i;
+	printf("Nhap so can chuyen doi inch sang cm: ");
+	scanf_s("%f", &a);
+	i = a / 2.54;
+	printf("Don vi da chuyen doi la: %f", i);
+	_getch();
+}
+void main()
+{
+	chuyendoi();
+}
+
+BAI 2
+
+#include<stdio.h>
+#include<conio.h>
+void pheptinh()
+{
+	int a, b;
+	printf("Nhap so thuc a: ");
+	scanf_s("%d", &a);
+	printf("Nhap so thuc b: ");
+	scanf_s("%d", &b);
+	printf("Tong hai so la: %d\n", a + b);
+	printf("Hieu hai so la: %d\n", a - b);
+	printf("Tich hai so la: %d\n", a*b);
+	printf("Thuong hai so la: %d", a / b);
+	_getch();
+}
+void main()
+{
+	pheptinh();
+}
+
+BAI 3
+
+#include<stdio.h>
+#include<conio.h>
+void doidonvi()
+{
+	float a, b, c, d, e, f;
+	printf("Nhap so luong dong penny: ");
+	scanf_s("%f", &a);
+	printf("Nhap so luong dong nickel: ");
+	scanf_s("%f", &b);
+	printf("Nhap so luong dong dime: ");
+	scanf_s("%f", &c);
+	printf("Nhap so luong dong quarter: ");
+	scanf_s("%f", &d);
+	printf("Nhap so luong mot nua dola: ");
+	scanf_s("%f", &e);
+	printf("Nhap so luong mot do la: ");
+	scanf_s("%f", &f);
+	printf("Tong so dong cent la: %f", a + (b * 5) + (c * 10) + (d * 25) + (e * 50) + (f * 100));
+	_getch();
+}
+void main()
+{
+	doidonvi();
+}
+
+BAI 4
+
+#include<stdio.h>
+#include<conio.h>
+void quydoi()
+{
+	int a;
+	printf("Nhap so luong cent can quy doi: ");
+	scanf_s("%d", &a);
+	int b=0,c=0,d=0,e=0, f=0, g=0;
+	do {
+		if (a >= 100)
+		{
+			g++;
+			a = a - 100;
+		}
+		else if (a >= 50)
+		{
+			f++;
+			a = a - 50;
+		}
+		else if (a >= 25) {
+			e++;
+			a = a - 25;
+		}
+		else if (a >= 10)
+		{
+			d++;
+			a = a - 10;
+		}
+		else if (a >= 5)
+		{
+			c++;
+			a = a - 5;
+		}
+		else if (a >= 1)
+		{
+			b++;
+			a = a - 1;
+		}
+	} while (a > 0);
+
+	printf("Quy doi: %d do la %d nua do la %d quarter %d dime %d nickel %d penny", g, f, e,d, c, b);
+	_getch();
+}
+void main() {
+quydoi();
+}
+
+BAI 5
+
+include<stdio.h>
+#include<conio.h>
+void timmax()
+{
+	int a, b, c, max;
+	printf("Nhap so nguyen a ");
+	scanf_s("%d", &a);
+	printf("Nhap so nguyen b ");
+	scanf_s("%d", &b);
+	printf("Nhap so nguyen c ");
+	scanf_s("%d", &c);
+	max = a;
+	if (a < b)
+		max = b;
+	else if (b < c && a<c)
+		max = c;
+	printf("Gia tri lon nhat la: %d", max);
+	_getch();
+}
+void main()
+{
+	timmax();
+}
+
+
+// Bài 7
+#include<stdio.h>
+#include<conio.h>
+void NhapDuLieu(int *n)
+{
+	printf("Nhap so nguyen n: ");
+	scanf("%d", n);
+}
+void SapXep(int a, int b, int c)
+{
+	printf("\nNhap diem mon toan=");
+	scanf("%d", &a);
+	printf("\nNhap diem mon van=");
+	scanf("%d", &b);
+	printf("\nNhap diem mon anh=");
+	scanf("%d", &c);
+	float DiemTB = (a * 2 + b * 2 + c) / 5;
+	if (DiemTB >= 8 && a >= 8 || b >= 8)
+	{
+		printf("hoc sinh gioi");
+	}
+	else if (DiemTB >= 6.5 && a >= 6.5 || b >= 6.5)
+	{
+		printf("hoc sinh kha");
+	}
+	else if (DiemTB >= 5 && a >= 5 || b >= 5)
+	{
+		printf("hoc sinh trung binh");
+	}
+	else if (DiemTB < 5)
+	{
+		printf("hoc sinh yeu");
+	}
+}
+
+void main()
+{
+	int a, b, c;
+	NhapDuLieu(&a);
+	NhapDuLieu(&b);
+	NhapDuLieu(&c);
+	SapXep(a, b, c);
+}
+
+
+
+// Bài 1
+include<stdio.h>
+#include<conio.h>
+void chuyendoi()
+{
+	float a, i;
+	printf("Nhap so can chuyen doi inch sang cm: ");
+	scanf_s("%f", &a);
+	i = a / 2.54;
+	printf("Don vi da chuyen doi la: %f", i);
+	_getch();
+}
+void main()
+{
+	chuyendoi();
+}
+
+#include<stdio.h>
+#include<conio.h>
+void pheptinh()
+{
+	int a, b;
+	printf("Nhap so thuc a: ");
+	scanf_s("%d", &a);
+	printf("Nhap so thuc b: ");
+	scanf_s("%d", &b);
+	printf("Tong hai so la: %d\n", a + b);
+	printf("Hieu hai so la: %d\n", a - b);
+	printf("Tich hai so la: %d\n", a*b);
+	printf("Thuong hai so la: %d", a / b);
+	_getch();
+}
+void main()
+{
+	pheptinh();
+}
+
+// Bài 2
+include<stdio.h>
+#include<conio.h>
+void doidonvi()
+{
+	float a, b, c, d, e, f;
+	printf("Nhap so luong dong penny: ");
+	scanf_s("%f", &a);
+	printf("Nhap so luong dong nickel: ");
+	scanf_s("%f", &b);
+	printf("Nhap so luong dong dime: ");
+	scanf_s("%f", &c);
+	printf("Nhap so luong dong quarter: ");
+	scanf_s("%f", &d);
+	printf("Nhap so luong mot nua dola: ");
+	scanf_s("%f", &e);
+	printf("Nhap so luong mot do la: ");
+	scanf_s("%f", &f);
+	printf("Tong so dong cent la: %f", a + (b * 5) + (c * 10) + (d * 25) + (e * 50) + (f * 100));
+	_getch();
+}
+void main()
+{
+	doidonvi();
+}
+
+// Bài 3
+#include<stdio.h>
+#include<conio.h>
+void quydoi()
+{
+	int a;
+	printf("Nhap so luong cent can quy doi: ");
+	scanf_s("%d", &a);
+	int b = 0, c = 0, d = 0, e = 0, f = 0, g = 0;
+	do {
+		if (a >= 100)
+		{
+			g++;
+			a = a - 100;
+		}
+		else if (a >= 50)
+		{
+			f++;
+			a = a - 50;
+		}
+		else if (a >= 25) {
+			e++;
+			a = a - 25;
+		}
+		else if (a >= 10)
+		{
+			d++;
+			a = a - 10;
+		}
+		else if (a >= 5)
+		{
+			c++;
+			a = a - 5;
+		}
+		else if (a >= 1)
+		{
+			b++;
+			a = a - 1;
+		}
+	} while (a > 0);
+
+	printf("Quy doi: %d do la %d nua do la %d quarter %d dime %d nickel %d penny", g, f, e, d, c, b);
+	_getch();
+}
+void main() {
+	quydoi();
+}
+
+// Bài 5
+#include<stdio.h>
+#include<conio.h>
+void timmax()
+{
+	int a, b, c, max;
+	printf("Nhap so nguyen a ");
+	scanf_s("%d", &a);
+	printf("Nhap so nguyen b ");
+	scanf_s("%d", &b);
+	printf("Nhap so nguyen c ");
+	scanf_s("%d", &c);
+	max = a;
+	if (a < b)
+		max = b;
+	else if (b < c && a < c)
+		max = c;
+	printf("Gia tri lon nhat la: %d", max);
+	_getch();
+}
+void main()
+{
+	timmax();
+}
+// Bài 6
+#include<stdio.h>
+#include<conio.h>
+
+
+int TimMax(int a, int b, int c)
+{
+	int iMax = a;
+	if (iMax < b)
+	{
+		iMax = b;
+	}
+	if (iMax < c)
+	{
+		iMax = c;
+	}
+	return iMax;
+}
+
+int TimMin(int a, int b, int c)
+{
+	int iMin = a;
+	if (iMin > b)
+	{
+		iMin = b;
+	}
+	if (iMin > c)
+	{
+		iMin = c;
+	}
+	return iMin;
+}
+
+void main()
+{
+	int a, b, c, iMid, iMin, iMax;
+	iMid = 1;
+	printf("\nNhap so nguyen a:");
+	scanf("%d", &a);
+	printf("\nNhap so nguyen b:");
+	scanf("%d", &b);
+	printf("\nNhap so nguyen c:");
+	scanf("%d", &c);
+
+	if (a == b && b == c)
+	{
+		iMid = a;
+	}
+	else if (a == b || a == c || b == c)
+	{
+		if (a == b || a == c)
+		{
+			iMid = a;
+		}
+		else
+		{
+			iMid = b;
+		}
+	}
+	else
+	{
+		iMin = TimMin(a, b, c);
+		iMax = TimMax(a, b, c);
+		if (iMax > a && a > iMin)
+		{
+			iMid = a;
+		}
+		else if (iMax > b && b > iMin)
+		{
+			iMid = b;
+		}
+		else
+		{
+			iMid = c;
+		}
+	}
+	printf("%d", iMid);
+}
+// Bài 8
+#include <stdio.h>
+#include <conio.h>
+#include<math.h>
+void NhapDuLieu(double *a)
+{
+	printf("Nhap du lieu n: ");
+	scanf("%lf", a);
+}
+void GiaiPTBac2(double a, double b, double c)
+{
+	double x1, x2;
+	if (a == 0)
+	{
+		x1 = -c / b;
+		printf("\nPhuong trinh co nghiem duy nhat là: %lf", x1);
+	}
+	else
+	{
+		double denta = b * b - 4 * a*c;
+		if (denta < 0)
+		{
+			printf("\nPhuong trinh vo nghiem");
+		}
+		else if (denta == 0)
+		{
+			double x = -b / 2 * a;
+			printf("\nPhuong trinh co mot nghiem kep x1=x2=%lf", x);
+		}
+		else
+		{
+			double x1 = (-b + sqrt(denta)) / 2 * a;
+			double x2 = (-b - sqrt(denta)) / 2 * a;
+			printf("\nPhuong trinh co hai nghiem phan biet:%lf, %lf", x1, x2);
+		}
+	}
+}
+int main()
+{
+	double a, b, c;
+	NhapDuLieu(&a);
+	NhapDuLieu(&b);
+	NhapDuLieu(&c);
+	GiaiPTBac2(a, b, c);
+}
+// Bài 9
+#include<stdio.h>
+#include<conio.h>
+void triTuyetDoi(int a, int b)
+{
+	int hieu;
+	hieu = a - b;
+	if (hieu >= 0)
+		printf("Ket qua la:%d", hieu);
+	else
+	{
+		hieu = -hieu;
+		printf("Ket qua la:%d", hieu);
+	}
+}
+int main()
+{
+	int a, b;
+	printf("nhap vao a:"); scanf_s("%d", &a);
+	printf("nhap vao b:"); scanf_s("%d", &b);
+	triTuyetDoi(a, b);
+	_getch();
+	return 0;
+}
+
+
+// Bài 10
+#include<stdio.h>
+#include<conio.h>
+void Nhap(char x)
+{
+	printf("\nNhap ki tu :");
+	scanf("%c", &x);
+}
+#include<stdio.h>
+#include<conio.h>
+
+
+void Nhap(char *x)
+{
+	printf("\nNhap ki tu :");
+	scanf("%c", x);
+}
+
+char BienDoi(char x)
+{
+	if (x >= 'A' && x <= 'Z')
+	{
+		x += 32;
+	}
+	return x;
+}
+
+int main()
+{
+	char x = NULL;
+	Nhap(&x);
+	char c = BienDoi(x);
+	printf("\nSau khi bien doi :%c", c);
+
+	_getch();
+	return 0;
+}
+
+
+11. Nhập vào độ dài 3 cạnh a, b, c của 1 tam giác. Cho biết 3 cạnh đó có lập thành một tam giác không? Nếu có, cho biết loại tam giác này (thường, cân, vuông, đều, vuông cân).
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+void kiemTraTamGiac(float a, float b, float c)
+{
+	float s1, s2, s3;
+	s1 = pow(a, 2) + pow(b, 2);
+	s2 = pow(b, 2) + pow(c, 2);
+	s3 = pow(a, 2) + pow(c, 2);
+	if (a + b > c&&a + c > b&&b + c > a)
+	{
+		printf("Ket Luan:Tam Giac\n");
+		if (a == b && b == c) 
+			printf("Tam Giac Tren La Tam Giac Deu\n");
+		else
+			if ((a == b&&b != c) || (a == c&&c != b) || (b == c&&b != a))
+				printf("Tam Giac Tren La Tam Giac Can\n");
+			else
+				if (s1 == pow(c, 2) || s2 == pow(a, 2) || s3 == pow(b, 2))
+					printf("Tam Giac Tren La Tam Giac Vuong\n");
+				else
+					if ((a == b && s1 == pow(c, 2)) || (b == c && s2 == pow(a, 2)) || (a == c && s3 == pow(b, 2)))
+						printf("Tam Giac Tren La Tam Giac Vuong Can\n");
+					else printf("Tam Giac Tren La Tam Giac Thuong");
+		}
+	else printf("Ket Luan:Khong Phai Tam Giac\n");
+}
+void main() 
+{
+	float a, b, c;
+	printf("nhap vao cac canh a:"); scanf_s("%f", &a);
+	printf("nhap vao cac canh b:"); scanf_s("%f", &b);
+	printf("nhap vao cac canh c:"); scanf_s("%f", &c);
+	kiemTraTamGiac(a, b, c);
+	_getch();
+}
+
+12.Viết hàm giải phương trình có dạng sau đây: ax3 + bx2 + cx + d = 0.
+
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
+#include<cmath>
+
+#include "pch.h"
+#include <iostream>
+using namespace std;
+#define PI 3.1415926535898
+void giaiPTBac3(float a, float b, float c, float d)
+{
+double delta, k, k1, k2, w, s, s1, s2, x1, x2, x3, x;
+delta = b * b - 3 * a*c;
+k1 = 9 * a*b*c - 2 * pow(b, 3) - 27 * a*a*d;
+k2 = 2 * pow(fabs(delta), 3 / 2);
+k = k1 / k2;
+w = acos(k) / 3;
+s1 = fabs(k) + sqrt(k*k - 1);
+s2 = fabs(k) - sqrt(k*k - 1);
+s = pow(b, 3) - 27 * a*a*d;
+if (delta > 0)
+{
+if (fabs(k) <= 1)
+{
+printf("Phuong Trinh Co 3 Nghiem\n");
+x1 = (2 * sqrt(delta)*cos(w) - b) / 3 * a;
+x2 = (2 * sqrt(delta)*cos(w - 2 * PI / 3) - b) / 3 * a;
+x3 = (2 * sqrt(delta)*cos(w + 2 * PI / 3) - b) / 3 * a;
+printf("Nghiem 1 la:%f\n", x1);
+printf("Nghiem 2 la:%f\n", x2);
+printf("Nghiem 3 la:%f\n", x3);
+}
+else
+{
+printf("Phuong Trinh Co 1 Nghiem Duy Nhat\n");
+x = (sqrt(delta)*fabs(k) / 3 * a*k)*(pow(s1, 1.0/ 3) + pow(s2, 1.0 / 3)) - b / 3 * a;
+printf("Nghiem Pt la:%f\n", x);
+}
+}
+if (delta == 0)
+{
+printf("Phuong Trinh Nghiem Boi\n");
+x = (-b + pow(s, 1.0 / 3)) / 3 * a;
+printf("Nghiem Pt la:%f\n", x);
+}
+if (delta < 0)
+{
+printf("Phuong Trinh Co 1 Nghiem Duy Nhat\n");
+x = (sqrt(fabs(delta))) / 3 * a*(pow(s1, 1.0 / 3) + pow(s2, 1.0 / 3)) - b / 3 * a;
+printf("Nghiem Pt la:%f\n", x);
+}
+}
+int main()
+{
+float a, b, c, d;
+printf("Nhap vao cac he so:\n");
+printf("Nhap vao he so a:"); scanf_s("%f", &a);
+printf("Nhap vao he so b:"); scanf_s("%f", &b);
+printf("Nhap vao he so c:"); scanf_s("%f", &c);
+printf("Nhap vao he so d:"); scanf_s("%f", &d);
+giaiPTBac3(a, b, c, d);
+
+return 0;
+}
+13.Viết hàm kiểm tra ngày (gồm 3 thành phần là ngày, tháng, năm) cho trước có phải là một ngày hợp lệ.
+#include<stdio.h>
+#include<conio.h>
+void kiemTra(int ngay, int thang, int nam) {
+	switch (thang)
+	{
+	case 1:case 3:case 5:case 7:case 8:case 10: case 12:
+		if (ngay > 0 && ngay <= 31)
+			printf("Hop Le");
+		else
+			printf("Khong Hop Le");
+		break;
+
+	case 4:case 6:case 9:case 11:
+		if (ngay > 0 && ngay <= 30)
+			printf("Hop Le");
+		else
+			printf("Khong Hop Le");
+		break;
+
+	case 2:
+		if (nam % 4 == 0) {
+			if (ngay > 0 && ngay <= 29)
+				printf("Hop Le");
+			else
+				printf("Khong Hop Le");
+		}
+		else {
+			if (ngay > 0 && ngay <= 28)
+				printf("Hop Le");
+			else
+				printf("Khong Hop Le");
+			break;
+		}
+	}
+}
+void main()
+{
+	int ngay, thang, nam;
+	printf("Nhap vao ngay:"); scanf_s("%d", &ngay);
+	printf("Nhap vao thang:"); scanf_s("%d", &thang);
+	printf("Nhap vao nam:"); scanf_s("%d", &nam);
+	printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+	kiemTra(ngay, thang, nam);
+	_getch();
+}
+
+14.Viết hàm cho biết ngày hôm trước của một ngày cho trước.
+#include<stdio.h>
+#include<conio.h>
+void kiemTraNgayTruoc(int ngay, int thang, int nam)
+{
+	switch (thang)
+	{
+	case 4:case 6:case 9:case 11:
+		if (ngay > 1 && ngay <= 30)
+		{
+			ngay--;
+			printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+		}
+		else
+		{
+			if (ngay == 1)
+			{
+				ngay = 31;
+				thang--;
+				printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+			}
+		}
+		break;
+	case 5:case 7:case 10:case 12:
+		if (ngay > 1 && ngay <= 31)
+		{
+			ngay--;
+			printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+		}
+		else
+		{
+			if (ngay == 1)
+			{
+				ngay = 30;
+				thang--;
+				printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+
+			}
+		}
+		break;
+	case 3:
+		if (ngay > 1 && ngay <= 31)
+		{
+			ngay--;
+			printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+		}
+		else
+		{
+			if (ngay == 1)
+			{
+				if (nam % 400 == 0)
+				{
+					ngay = 29;
+					thang--;
+					printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+				}
+				else
+				{
+					ngay = 28;
+					thang--;
+					printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+				}
+			}
+		}
+		break;
+	case 1:
+		if (ngay>1&&thang<=31)
+		{
+			ngay--;
+			printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+		}
+	case 2:
+	{
+		if (nam % 400 == 0)
+		{
+			if (ngay > 1 && ngay <= 29)
+			{
+				ngay--;
+				printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+			}
+			else
+			{
+				if (ngay == 1)
+				{
+					ngay = 31;
+					thang--;
+					printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+				}
+			}
+		}
+		else
+		{
+			if (ngay > 1 && ngay <= 28)
+			{
+				ngay--;
+				printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+			}
+			else
+			{
+				if (ngay == 1)
+				{
+					ngay = 31;
+					thang--;
+					printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+				}
+			}
+		}
+	}
+	break;
+	case 8:
+		if (ngay > 1 && ngay <= 31)
+		{
+			ngay--;
+			printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+		}
+		else
+		{
+			if (ngay == 1)
+			{
+				ngay = 31;
+				thang--;
+				printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+			}
+		}
+		break;
+	}
+}
+void main()
+{
+	int ngay, thang, nam;
+	printf("Nhap vao ngay:"); scanf_s("%d", &ngay);
+	printf("Nhap vao thang:"); scanf_s("%d", &thang);
+	printf("Nhap vao nam:"); scanf_s("%d", &nam);
+	printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+	printf("Ngay Truoc Do La:\n");
+	kiemTraNgayTruoc(ngay, thang, nam);
+	_getch();
+}
+
+	
+	15.Viết hàm cho biết ngày hôm sau của một ngày cho trước.
+#include<stdio.h>
+#include<conio.h>
+void kiemTraNgaySau(int ngay, int thang, int nam)
+{
+	switch (thang)
+	{
+	case 1:case 3:case 5:case 7:case 8:case 10:case 12:
+		if (ngay >= 1 && ngay < 31)
+		{
+			ngay++;
+			printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+		}
+		else
+		{
+			if (ngay == 31)
+			{
+				ngay = 1;
+				thang++;
+				printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+			}
+		}
+		break;
+	case 4:case 6:case 9:case 11:
+		if (ngay >= 1 && ngay < 30)
+		{
+			ngay++;
+			printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+		}
+		else
+		{
+			if (ngay = 30)
+			{
+				ngay = 1;
+				thang++;
+				printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+			}
+		}
+		break;
+	case 2:
+		if (nam % 400 == 0)
+		{
+			if (ngay >= 1 && ngay < 29)
+			{
+				ngay++;
+				printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+			}
+			else
+			{
+				if (ngay == 29)
+				{
+					ngay = 1;
+					thang++;
+					printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+				}
+			}
+		}
+		else
+		{
+			if (ngay >= 1 && ngay < 28)
+			{
+				ngay++;
+				printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+			}
+			else
+			{
+				if (ngay == 28)
+				{
+					ngay = 1;
+					thang++;
+					printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+				}
+			}
+		}
+	}
+}
+void main()
+{
+	int ngay, thang, nam;
+	printf("Nhap vao ngay:"); scanf_s("%d", &ngay);
+	printf("Nhap vao thang:"); scanf_s("%d", &thang);
+	printf("Nhap vao nam:"); scanf_s("%d", &nam);
+	printf("Ngay %d thang %d nam %d\n", ngay, thang, nam);
+	printf("Ngay Sau Do La:\n");
+	kiemTraNgaySau(ngay, thang, nam);
+	_getch();
+}
+
+	
+
