@@ -1,0 +1,58 @@
+# BaiTapNhomLan1
+#include<iostream>
+#define MAX 100
+using namespace std;
+void nhapmang(int a[], int n) {
+	for (int i =0 ; i < n; i++) {
+		cout << "\nnhap a["<<i << "]=";
+		cin >> a[i];
+	}
+}
+void xuatmang(int a[], int n) {
+	for (int i = 0; i < n; i++) {
+		cout << a[i] << " ";
+	}
+}
+int tong(int a[], int n) {
+	int tong = 0;
+	for (int i = 0; i < n; i++) {
+		tong += a[i];
+	}
+	return tong;
+}
+int  min(int a[], int n) {
+	int vtnn = 0;
+	for (int i = 0; i < n; i++) 
+	{
+		if (a[vtnn] > a[i])
+		{
+			vtnn = i;
+		}
+	}
+	return vtnn;
+}
+void kiemtra(int a[], int n) {
+	for (int i = 0; i < n; i++) {
+		if (a[i] % 2 == 0 && a[i] < 2014) {
+			cout << a[i]<<"   ";
+		}
+	}
+}
+void main(){
+	int a[MAX], n;
+	do{
+		cout << "\nNhap vao so phan tu cua mang : ";
+		cin >> n;
+		if (n < 0 || n >100) {
+			cout << "\Vui long kiem tra lai";
+		}
+	} while (n <0 || n > 100);
+	nhapmang(a, n);
+	xuatmang(a, n);
+	cout << "\ns = "<<tong(a, n);
+	cout << "\nvi tri min la ";
+	cout<< min(a, n);
+	cout << "\nkiem tra "<<endl;
+	kiemtra(a, n);
+		system("pause");
+	}
